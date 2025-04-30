@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: fluxgate
+client:
+  user-service:
+    base-url: http://localhost:8081
+  order-service:
+    base-url: http://localhost:8081
+  notification-service:
+    base-url: http://localhost:8081
