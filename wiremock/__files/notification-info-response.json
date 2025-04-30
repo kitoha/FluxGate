@@ -1,0 +1,12 @@
+[
+  {
+    "notificationId": 101,
+    "message": "Welcome to FluxGate!",
+    "sentAt": "2025-04-30T10:00:00Z"
+  },
+  {
+    "notificationId": 102,
+    "message": "Your daily summary is ready.",
+    "sentAt": "2025-04-30T17:00:00Z"
+  }
+]
