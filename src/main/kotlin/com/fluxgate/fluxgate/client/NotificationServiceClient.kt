@@ -1,0 +1,22 @@
+package com.fluxgate.fluxgate.client
+
+import com.fluxgate.fluxgate.dto.NotificationInfo
+import org.springframework.stereotype.Component
+import org.springframework.web.reactive.function.client.WebClient
+import reactor.core.publisher.Flux
+
+@Component
+class NotificationServiceClient (
+  private val webClient: WebClient
+){
+
+  private val baseUrl = "http://localhost:8081"
+
+  fun getNotificationInfo(userId: String): Flux<NotificationInfo>{
+    return webClient
+      .get()
+      .uri("$baseUrl/notification-info/{userId}", userId)
+      .retrieve()
+      .bodyToFlux(NotificationInfo::class.java)
+  }
+}
