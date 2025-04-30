@@ -1,0 +1,55 @@
+name: 🧩 Feature Request
+description: 새로운 기능을 제안하고 구현을 관리합니다
+title: "[Feature] <기능 요약>"
+labels: [ "feature", "priority:medium" ]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📌 기능 개요
+        어떤 기능을 추가하려고 하는지 간단히 설명해주세요.
+
+  - type: textarea
+    id: problem_statement
+    attributes:
+      label: 해결하려는 문제 / 추가 이유
+      description: 이 기능이 왜 필요한가요?
+      placeholder: |
+        예: 외부 User API 응답을 비동기로 받아 통합하기 위함
+
+  - type: textarea
+    id: implementation_plan
+    attributes:
+      label: 구현 계획
+      description: 구현을 어떻게 진행할 계획인지 단계별로 작성해주세요
+      placeholder: |
+        - [ ] WebClient로 API 호출
+        - [ ] Fallback 로직 작성
+        - [ ] Aggregator에 통합
+      render: bash
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 우선순위
+      description: 이슈의 처리 우선순위를 선택해주세요
+      options:
+        - 🟥 High
+        - 🟨 Medium
+        - 🟩 Low
+    validations:
+      required: true
+
+  - type: input
+    id: due_date
+    attributes:
+      label: 완료 목표일
+      placeholder: YYYY-MM-DD
+      description: 이 기능을 언제까지 완료할 계획인가요?
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 관련 환경/설정 (선택)
+      placeholder: "예: WireMock Docker, WebClient baseUrl, port: 8081"
