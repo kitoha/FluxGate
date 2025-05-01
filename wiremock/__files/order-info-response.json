@@ -1,0 +1,12 @@
+[
+  {
+    "orderId": 1,
+    "productName": "FluxGate Pro Subscription",
+    "orderDate": "2025-04-29"
+  },
+  {
+    "orderId": 2,
+    "productName": "Reactive WebFlux Guide",
+    "orderDate": "2025-04-28"
+  }
+]
