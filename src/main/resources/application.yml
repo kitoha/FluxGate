@@ -1,6 +1,8 @@
 spring:
   application:
     name: fluxgate
+
+# wireMock 설정
 client:
   user-service:
     base-url: http://localhost:8081
@@ -8,3 +10,15 @@ client:
     base-url: http://localhost:8081
   notification-service:
     base-url: http://localhost:8081
+
+# 모니터링 설정
+management:
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: health,prometheus
+  endpoint:
+    prometheus:
+      enabled: true
+
