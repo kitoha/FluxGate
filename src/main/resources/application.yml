@@ -1,6 +1,9 @@
 spring:
   application:
     name: fluxgate
+  config:
+    activate:
+      on-profile: chaos-monkey
 
 # wireMock 설정
 client:
@@ -17,7 +20,7 @@ management:
     web:
       base-path: /
       exposure:
-        include: health,prometheus
+        include: health,prometheus,info,chaosmonkey
   metrics:
     distribution:
       percentiles:
@@ -27,4 +30,18 @@ management:
   endpoint:
     prometheus:
       enabled: true
+    chaosmonkey:
+      enabled: true
+
+chaos:
+  monkey:
+    enabled: true
+    watcher:
+      service: true
+      controller: true
+    assaults:
+      latencyActive: true
+
+
+
 

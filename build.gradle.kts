@@ -37,6 +37,7 @@ dependencies {
 	testImplementation(libs.kotest.assertions.core)
 	testImplementation(libs.kotest.property)
 	testImplementation(libs.wiremock.jre8.standalone)
+	implementation("de.codecentric:chaos-monkey-spring-boot:3.2.1")
 }
 
 dependencyManagement {
